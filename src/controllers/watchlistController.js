@@ -1,5 +1,43 @@
 import { prisma } from "../config/db.js";
 
+export const getWatchlistItem = async (req, res) => {
+    try {
+        const watchlistItem = await prisma.watchlistItem.findMany({
+            where: { userId: req.user.id },
+            select: {
+                id: true,
+                userId: true,
+                movieId: true,
+                status: true,
+                rating: true,
+                notes: true,
+                movie: {
+                    select: {
+                        id: true,
+                        title: true,
+                        overview: true,
+                        releaseYear: true,
+                        genres: true,
+                        runtime: true,
+                        posterUrl: true
+                    }
+                }
+            },
+        });
+
+        if (watchlistItem.length === 0) {
+            return res.status(404).json({ error: "Watchlist is empty" });
+        }
+
+        return res.status(201).json({
+            status: "Success",
+            data: watchlistItem
+        })
+    } catch (error) {
+        return res.status(404).json({ status: "Failed", error: error.message });
+    }
+}
+
 export const addToWatchlist = async (req, res) => {
     const { movieId, status, rating, notes, userId } = req.body;
 
