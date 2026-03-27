@@ -21,4 +21,8 @@ app.use("/movie", movieRoutes);
 app.use("/auth", authRoutes);
 app.use("/watchlist", watchlistRoutes);
 
+app.use("/", (req, res) => {
+    res.send("Watchlist Movie API is running!");
+});
+
 export default app;
