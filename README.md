@@ -41,10 +41,10 @@ Express.js and Prisma ORM.
 - Register and log in to get an authentication token.
 - Use the token to access protected routes for watchlists.
 - Example endpoints:
-  - `POST /api/auth/register`
-  - `POST /api/auth/login`
-  - `GET /api/movies`
-  - `POST /api/watchlist`
+  - `POST   /api/auth/register`
+  - `POST   /api/auth/login`
+  - `GET    /api/movies`
+  - `POST   /api/watchlist`
 
 ## 🙌 Credits
 
