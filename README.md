@@ -6,12 +6,12 @@ Express.js and Prisma ORM.
 
 ## 📋 Table of Contents
 
-- [⚙️ Installation](#-installation)
-- [🚀 Usage](#-usage)
-- [🙌 Credits](#-credits)
-- [📝 License](#-license)
+- [⚙️ Installation](#installation)
+- [🚀 Usage](#usage)
+- [🙌 Credits](#credits)
+- [📝 License](#license)
 
-## ⚙️ Installation
+## Installation
 
 1. Clone the repository:
    ```
@@ -36,7 +36,7 @@ Express.js and Prisma ORM.
     npm run dev
    ```
 
-## 🚀 Usage
+## Usage
 
 - Register and log in to get an authentication token.
 - Use the token to access protected routes for watchlists.
@@ -46,12 +46,12 @@ Express.js and Prisma ORM.
   - `GET    /api/movies`
   - `POST   /api/watchlist`
 
-## 🙌 Credits
+## Credits
 
 This project was created by following the tutorial:
 
 - [Node.js Backend Course - PedroTech (Youtube)](https://youtu.be/g09PoiCob4Y?si=RmHlzogHwl5A4I_H)
 
-## 📝 License
+## License
 
 MIT License
